@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="input-group search-bar">
+        <input type="text" ng-controller="myController">
+               ng-model="search"     <!--Bind the input field where the users enters names-->
+               ng-change="change()"    <!--Change directive whenever change happens to call in our controller-->
+               placeholder="Enter full movie name"/>
+
+              <ul>
+                <li ng-repeat="people in myPeople"></li>
+                  <li>{{people.first_Name}}</li>
+              </ul>
+      </div>
+    </div>
+  </div>
+</div>

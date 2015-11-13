@@ -1,0 +1,100 @@
+<div class="text-center">
+    <p> MEDCOMPANY </p>
+    <p>Medcompany Efficacy Study</p>
+</div>
+</br>
+</br>
+</br>
+<!--MAIN HEADER TO PUT EVERYTHING IN A PANEL BODY-->
+
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body ">
+                </br>
+                </br>
+                </br>
+                </br>
+                <div class="text-center">
+                    <p>Voluntary Participation</<p>>
+                </div>
+                </br>
+                </br>
+                </br>
+
+                <div class="container">
+                    <p> Participation in this study is voluntary.  Fi you do not wish to participate, there will be no penalty of any kind. </p>
+                    <p>To confirm your intent to enroll in this study, please complete the form below</p>
+                </div>
+
+
+                <!--USER FORM FIELDS- NAME-->
+                <form name="userForm">
+                    <div class="col-sm-6">
+                        <label>First Name</label>
+                        <input type="text" name="firstName" ng-model="firstName" class="form-control" id="exampleInputEmail1" placeholder="John" ng-minlength="3" required>
+
+
+                        <div ng-messages="userForm.firstName.$error">
+                            <div ng-message="required"> this is required</div>
+                        </div>
+                    </div>
+
+
+                    <!--USER FORM FIELDS- LAST NAME-->
+                    <div class="col-sm-6">
+                        <label>Last Name</label>
+                        <input type="text" name="userLastName" ng-model="lastName" class="form-control" id="exampleInputEmail1" placeholder="Doe" ng-minlength="3" required>
+
+                        <div ng-messages="userForm.userLastName.$error">
+                            <div ng-message="required"> this is required</div>
+                        </div>
+                    </div>
+
+
+                    <!--NEW CONTAINER AND ROW TO START A NEW LINE FOR THE CITY-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label> City</label>
+                                <input type="city" name="userCity" ng-model="userCity" required class="form-control" id="exampleInputEmail1" placeholder="City Name" ng-minlength="3" required>
+
+                                <div ng-messages="userForm.userCity.$error">
+                                    <div ng-message="required"> this is required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--NEW CONTAINER AND ROW TO START A NEW LINE FOR THE CHECKBOX-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" ng-model='newUser.terms' value="1" required> I consent to participate in the study
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--NEW CONTAINER AND ROW TO START A NEW LINE FOR THE BACK BUTTON AND THE SUBMIT VALUE-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <button type="submit" class="btn btn-default"><</button>
+                            </div>
+                            <div class="col-sm-10">
+                                <button type="submit" ng-disabled="form.$invalid" class="btn btn-default">     Complete this form to continue enrollment     </button>
+                                </br></br>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
